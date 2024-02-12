@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post a Pet Event</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('add_pet_for_sale') }}">Add Pet for Sale</a>
+        <a href="{{ url_for('view_pets_for_sale') }}">View Pets for Sale</a>
+        <a href="{{ url_for('find_clinics') }}">Clinic Connect</a>
+        
+        <a href="{{ url_for('compatibility') }}">Preference Pets</a>
+        <a href="{{ url_for('view_pets_for_adoption') }}">View Pets for Adoption</a>
+        <a href="{{ url_for('post_for_adoption') }}">Post Pet for Adoption</a>
+        <a href="{{ url_for('post_event') }}">Add Events</a>
+        <a href="{{ url_for('view_events') }}">View All Events</a>
+    </div>
+    <h1 style="color:white;text-align: center;padding-top: 20px;">Post a Pet Event</h1>
+    <form method="POST" action="/post_event" enctype="multipart/form-data">
+        <label for="event_name">Event Name:</label>
+        <input type="text" id="event_name" name="event_name" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="locality">Locality:</label>
+        <input type="text" id="locality" name="locality" required>
+
+        <label for="event_image">Event Image:</label>
+        <input type="file" id="event_image" name="event_image" accept="image/*" required>
+
+        <button type="submit">Post Event</button>
+    </form>
+    
+</body>
+</html>

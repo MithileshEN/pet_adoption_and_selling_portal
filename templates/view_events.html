@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Pet Events</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='event.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('add_pet_for_sale') }}">Add Pet for Sale</a>
+        <a href="{{ url_for('view_pets_for_sale') }}">View Pets for Sale</a>
+        <a href="{{ url_for('find_clinics') }}">Clinic Connect</a>
+        <a href="{{ url_for('chatbot') }}">Chatbot</a>
+        <a href="{{ url_for('compatibility') }}">Preference Pets</a>
+        <a href="{{ url_for('view_pets_for_adoption') }}">View Pets for Adoption</a>
+        <a href="{{ url_for('post_for_adoption') }}">Post Pet for Adoption</a>
+        <a href="{{ url_for('post_event') }}">Add Events</a>
+        <a href="{{ url_for('view_events') }}">View All Events</a>
+    </div>
+    <h1>Pet Events</h1>
+    <form method="GET" action="/view_events">
+        <label for="locality" style="color:white">Enter Your Locality:</label>
+        <input type="text" id="locality" name="locality">
+        <button type="submit">Filter Events</button>
+    </form>
+    <div class="event-cards">
+        {% for event in events %}
+        <div class="event-card">
+            <h2>{{ event.event_name }}</h2>
+            <img src="{{ url_for('uploaded_file', filename=event.image) }}" alt="{{ event.event_name }} Image">
+            <p><strong>Date:</strong> {{ event.date }}</p>
+            <p><strong>Time:</strong> {{ event.time }}</p>
+            <p><strong>Description:</strong> {{ event.description }}</p>
+            <p><strong>Locality:</strong> {{ event.locality }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
+

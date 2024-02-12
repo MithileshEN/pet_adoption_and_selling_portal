@@ -1,0 +1,163 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/707/220/899/gradient-blue-pink-abstract-art-wallpaper-preview.jpg');
+    /* Adjust the path */
+    background-size: cover;
+}
+
+/* Style the page title */
+h1 {
+    color: #333;
+}
+
+/* Style the navigation links */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    margin-right: 20px;
+}
+
+/* Style the form elements */
+form {
+    background-color:white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+    margin: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style the list of pets */
+ul {
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+/* Style the images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* ... (Previous CSS styles) */
+
+/* Style the pet cards */
+.pet-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.pet-card {
+    background-color: #fff;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
+
+/* Style the contact button */
+.contact-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* ... (Previous CSS styles) */

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compatibility Preferences</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('add_pet_for_sale') }}">Add Pet for Sale</a>
+        <a href="{{ url_for('view_pets_for_sale') }}">View Pets for Sale</a>
+        <a href="{{ url_for('find_clinics') }}">Clinic Connect</a>
+        <a href="{{ url_for('chatbot') }}">Chatbot</a>
+        <a href="{{ url_for('compatibility') }}">Preference Pets</a>
+        <a href="{{ url_for('view_pets_for_adoption') }}">View Pets for Adoption</a>
+        <a href="{{ url_for('post_for_adoption') }}">Post Pet for Adoption</a>
+        <a href="{{ url_for('post_event') }}">Add Events</a>
+        <a href="{{ url_for('view_events') }}">View All Events</a>
+    </div>
+    <h1>Compatibility Preferences</h1>
+    <form method="POST" action="/compatibility">
+        <label for="personality" style="color:white">Select Personality:(active/inactive)</label>
+        <input type="text" name="personality">
+
+        <label for="breed_preference" style="color:white">Select Breed Preference:</label>
+        <input type="text" name="breed_preference">
+
+        <label for="pet_parenting" style="color:white">Select Pet Parenting Character:(office going/stay)</label>
+        <input type="text" name="pet_parenting">
+
+        <label for="climate_zone" style="color:white">Select Climate Zone:(tropical/arid/temperate)</label>
+        <input type="text" name="climate_zone">
+
+        <label for="dog_space" style="color:white">Select Dog Space (caged/free space):</label>
+        <input type="text" name="dog_space">
+
+        <label for="allergic_to_hair" style="color:white">Are You Allergic to Dog Hair Strands? (yes/no):</label>
+        <input type="text" name="allergic_to_hair">
+
+        <label for="aggressive_friendly" style="color:white">Select Pet (Aggressiveness/Friendliness):</label>
+        <input type="text" name="aggressive_friendly">
+
+        <label for="financial_considerations" style="color:white">Select Financial Considerations:(low/affordable/high)</label>
+        <input type="text" name="financial_considerations">
+
+        <label for="noise_tolerance" style="color:white">Select Noise Tolerance:(low/moderate/high)</label>
+        <input type="text" name="noise_tolerance">
+
+        <label for="experience" style="color:white">Select Experience Level:(low/medium/high)</label>
+        <input type="text" name="experience">
+
+        <label for="time_commitment" style="color:white">Select Time Commitment:(low/medium/high)</label>
+        <input type="text" name="time_commitment">
+
+        <button type="submit">Find Compatible Pets</button>
+    </form>
+    
+</body>
+</html>
+
+

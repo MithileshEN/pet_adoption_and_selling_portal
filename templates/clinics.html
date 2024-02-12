@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clinics</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('add_pet_for_sale') }}">Add Pet for Sale</a>
+        <a href="{{ url_for('view_pets_for_sale') }}">View Pets for Sale</a>
+        <a href="{{ url_for('find_clinics') }}">Clinic Connect</a>
+        <a href="{{ url_for('chatbot') }}">Chatbot</a>
+        <a href="{{ url_for('compatibility') }}">Preference Pets</a>
+        <a href="{{ url_for('view_pets_for_adoption') }}">View Pets for Adoption</a>
+        <a href="{{ url_for('post_for_adoption') }}">Post Pet for Adoption</a>
+        <a href="{{ url_for('post_event') }}">Add Events</a>
+        <a href="{{ url_for('view_events') }}">View All Events</a>
+    </div>
+    <h1>Clinics in Your Locality</h1>
+    <ul>
+        {% for clinic in clinics_in_locality %}
+            <li>
+                <h2>{{ clinic.name }}</h2>
+                <p><strong>Locality:</strong> {{ clinic.address.locality }}</p>
+                <p><strong>City:</strong> {{ clinic.address.city }}</p>
+                <p><strong>Phone:</strong> {{ clinic.phone }}</p>
+                <p><strong>Email:</strong> {{ clinic.email }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Clinics in Your City</h1>
+    <ul>
+        {% for clinic in clinics_in_city %}
+            <li>
+                <h2>{{ clinic.name }}</h2>
+                <p><strong>Locality:</strong> {{ clinic.address.locality }}</p>
+                <p><strong>City:</strong> {{ clinic.address.city }}</p>
+                <p><strong>Phone:</strong> {{ clinic.phone }}</p>
+                <p><strong>Email:</strong> {{ clinic.email }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+@app.route('/find_clinics', methods=['GET', 'POST'])
+def find_clinics():
+    if request.method == 'POST':
+        locality = request.form['locality']
+        city = request.form['city']
+
+        # Find clinics with the same locality
+        clinics_in_locality = db.clinics.find({"address.locality": locality})
+        
+        # Find clinics in the same city but different locality
+        clinics_in_city = db.clinics.find({
+            "address.locality": {"$ne": locality},
+            "address.city": city
+        })
+
+        return render_template('clinics.html', clinics_in_locality=clinics_in_locality, clinics_in_city=clinics_in_city)
+
+    return render_template('find_clinics.html')
+
+

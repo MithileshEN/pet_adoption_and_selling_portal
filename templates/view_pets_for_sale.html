@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Pets for Sale</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('add_pet_for_sale') }}">Add Pet for Sale</a>
+        <a href="{{ url_for('view_pets_for_sale') }}">View Pets for Sale</a>
+        <a href="{{ url_for('find_clinics') }}">Clinic Connect</a>
+        
+        <a href="{{ url_for('compatibility') }}">Preference Pets</a>
+        <a href="{{ url_for('view_pets_for_adoption') }}">View Pets for Adoption</a>
+        <a href="{{ url_for('post_for_adoption') }}">Post Pet for Adoption</a>
+        <a href="{{ url_for('post_event') }}">Add Events</a>
+        <a href="{{ url_for('view_events') }}">View All Events</a>
+    </div>
+    <h1 style="text-align: center;color: white;padding-top: 20px;">Pets for Sale</h1>
+    <div class="pet-cards">
+        {% for pet in pets_for_sale %}
+            <div class="pet-card">
+                <div class="left-side">
+                    <h2>{{ pet.name }}</h2>
+                    <p><strong>Species:</strong> {{ pet.species }}</p>
+                    <p><strong>Age:</strong> {{ pet.age }} years old</p>
+                    <p><strong>Contact</strong> {{ pet.contact }}</p>
+                    <button class="contact-button">Contact</button>
+                </div>
+                <div class="right-side">
+                    {% if pet.image %}
+                        <img src="{{ url_for('uploaded_file', filename=pet.image) }}" alt="{{ pet.name }} Image">
+                    {% endif %}
+                </div>
+               
+            </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
+

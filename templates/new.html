@@ -1,0 +1,205 @@
+Code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmSpectra - Short Film Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        ol, ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+
+        label, textarea, input, button {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to FilmSpectra</h1>
+        <p>Your hub for short film promotion, filmmaking tips, and community connections.</p>
+    </header>
+
+    <!-- Featured Short Film Section -->
+    <section>
+        <h2>Featured Short Film</h2>
+        <p>Check out our latest featured short film titled "<strong>The Journey Within</strong>".</p>
+        <video width="640" height="360" controls>
+            <source src="https://www.youtube.com/watch?v=E4BhEBaeQdg" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Filmmaking Tips Section -->
+    <section>
+        <h2>Filmmaking Tips</h2>
+        <p>Explore our filmmaking tips to enhance your skills:</p>
+        <ol>
+            <li>Use natural lighting for a more authentic feel.</li>
+            <li>Pay attention to sound quality during filming.</li>
+            <li>Craft a compelling story to engage your audience.</li>
+        </ol>
+    </section>
+
+    <!-- Community Connect Section -->
+    <section>
+        <h2>Community Connect</h2>
+        <p>Connect with other short filmmakers in our community forum:</p>
+        <ul>
+            <li><a href="forum/topic1">Topic 1: Share your latest short film</a></li>
+            <li><a href="forum/topic2">Topic 2: Seeking collaboration for upcoming projects</a></li>
+            <li><a href="forum/topic3">Topic 3: Tips and tricks for ***** filmmakers</a></li>
+        </ul>
+    </section>
+
+    <!-- Review Section -->
+    <section>
+        <h2>Review a Short Film</h2>
+        <p>Share your thoughts on a particular short film:</p>
+        <form>
+            <label for="filmTitle">Short Film Title:</label>
+            <input type="text" id="filmTitle" name="filmTitle" required>
+
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+
+    <!-- Weekly Discussion Schedule Section -->
+    <section>
+        <h2>This Week's Discussion Schedule</h2>
+        <p>Join us each day to watch a short film together and discuss its pros and cons in terms of filmmaking:</p>
+        <ul>
+            <li><strong>Monday:</strong> "Cinematic Wonders"</li>
+            <li><strong>Tuesday:</strong> "Soundscapes and Storytelling"</li>
+            <li><strong>Wednesday:</strong> "Visual Poetry"</li>
+            <li><strong>Thursday:</strong> "Narrative Innovations"</li>
+            <li><strong>Friday:</strong> "Character Development Masterclass"</li>
+        </ul>
+    </section>
+
+    <!-- Table of Filmmaking Resources -->
+    <section>
+        <h2>Filmmaking Resources</h2>
+        <table>
+            <tr>
+                <th>Resource</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><a href="resources/cameras">Choosing the Right Camera</a></td>
+                <td>Guidance on selecting the perfect camera for your short film.</td>
+            </tr>
+            <tr>
+                <td><a href="resources/editing">Essential Editing Techniques</a></td>
+                <td>Tips and tricks for effective editing in short film production.</td>
+            </tr>
+            <tr>
+                <td><a href="resources/sound">High-Quality Sound Capture</a></td>
+                <td>Learn how to capture and use high-quality sound in your films.</td>
+            </tr>
+        </table>
+        <h2><br></h2>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 FilmSpectra. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+

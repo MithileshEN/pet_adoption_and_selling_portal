@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pets Portal</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">ME COMPANION</h2>
+        <ul>
+
+           
+    <li><a href="/">Home</a></li>
+        <li><a href="/add_pet_for_sale">Add a Pet for Sale</a></li>
+        <li><a href="/view_pets_for_sale">View Pets for Sale</a></li>
+        <li><a href="{{ url_for('find_clinics') }}">Clinic Connect</a></li>
+        <li><a href="{{ url_for('chatbot') }}">Chatbot</a></li>
+        <li><a href="{{ url_for('compatibility') }}">Find Compatible Pets</a></li>
+        <li><a href="{{ url_for('view_pets_for_adoption') }}">View Pets for Adoption</a></li>
+        <li><a href="{{ url_for('post_for_adoption') }}">Post Pet for Adoption</a></li>
+        <li><a href="{{ url_for('post_event') }}">Add Events</a></li>
+        <li><a href="{{ url_for('view_events') }}">View All Events</a></li>
+            <!-- Add links to other pages as needed -->
+        </ul>
+    </div>
+    <div class="content">
+        <div class="background-image">
+            <div class="centered">
+                <h1>Welcome to ME-COMPANION</h1>
+                <p>Your one-stop destination for all things pet-related.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

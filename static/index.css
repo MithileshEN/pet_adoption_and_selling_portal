@@ -1,0 +1,68 @@
+/* CSS for home page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('https://img.freepik.com/premium-photo/depicts-pembroke-welsh-corgi-her-baby-playing-beautiful-garden-setting_920432-143.jpg'); /* Adjust the path */
+    background-size: cover;
+    
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration:none;
+    color: #fff;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.background-image {
+    text-align: center;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.centered {
+    background:transparent
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.centered h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.centered p {
+    font-size: 1.5em;
+}
+

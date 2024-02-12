@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Pet for Sale</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('add_pet_for_sale') }}">Add Pet for Sale</a>
+        <a href="{{ url_for('view_pets_for_sale') }}">View Pets for Sale</a>
+        <a href="{{ url_for('find_clinics') }}">Clinic Connect</a>
+        
+        <a href="{{ url_for('compatibility') }}">Preference Pets</a>
+        <a href="{{ url_for('view_pets_for_adoption') }}">View Pets for Adoption</a>
+        <a href="{{ url_for('post_for_adoption') }}">Post Pet for Adoption</a>
+        <a href="{{ url_for('post_event') }}">Add Events</a>
+        <a href="{{ url_for('view_events') }}">View All Events</a>
+    </div>
+    <h1 style="text-align: center;color:white;padding-top: 20px;">Add a Pet for Sale</h1>
+    <form method="POST" action="{{ url_for('add_pet_for_sale') }}" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <br>
+        <label for="species">Species:</label>
+        <input type="text" name="species" required>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" name="age" required>
+        <br>
+        <label for="personality">Select Personality:(active/inactive)</label>
+        <input type="text" name="personality">
+
+        <label for="breed_preference">Select Breed Preference:</label>
+        <input type="text" name="breed_preference">
+
+        <label for="pet_parenting">Select Pet Parenting Character:(office going/stay)</label>
+        <input type="text" name="pet_parenting">
+
+        <label for="climate_zone">Select Climate Zone:(tropical/arid/temperate)</label>
+        <input type="text" name="climate_zone">
+
+        <label for="dog_space">Select Dog Space (caged/free space):</label>
+        <input type="text" name="dog_space">
+
+        <label for="allergic_to_hair">Are You Allergic to Dog Hair Strands? (yes/no):</label>
+        <input type="text" name="allergic_to_hair">
+
+        <label for="aggressive_friendly">Select Pet Aggressiveness/Friendliness:</label>
+        <input type="text" name="aggressive_friendly">
+
+        <label for="financial_considerations">Select Financial Considerations:(low/medium/high)</label>
+        <input type="text" name="financial_considerations">
+
+        <label for="noise_tolerance">Select Noise Tolerance:(low/medium/high)</label>
+        <input type="text" name="noise_tolerance">
+
+        <label for="experience">Select Experience Level:(yes/no)</label>
+        <input type="text" name="experience">
+
+        <label for="time_commitment">Select Time Commitment:(low/moderate/high)</label>
+        <input type="text" name="time_commitment">
+        <label for="image">Image:</label>
+        <input type="file" name="image" accept="image/*" required>
+        <br>
+        <label for="characteristics">Characteristics:</label>
+        <textarea name="characteristics" rows="4" cols="50" required></textarea>
+        <br>
+        <label for="contact">Contact:</label>
+        <input type="text" name="contact">
+        <input type="submit" value="Add Pet for Sale">
+    </form>
+    
+</body>
+</html>
+
